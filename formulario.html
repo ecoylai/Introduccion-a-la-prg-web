@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de estilos con CSS</title>
+  <style type="text/css">
+	
+#texto{
+text-shadow: 4px 4px 2px rgba(150, 253, 150, 1);
+}
+  html, body, h1, form, fieldset, legend, ol, li {
+	margin: 0;
+	padding: 0;}
+body {	background: #ffffff;
+	color: #111111;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 20px;}
+form#payment {
+	background: #9cbc2c;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;}
+form#payment fieldset {
+	border: none;
+	margin-bottom: 10px;}
+form#payment fieldset:last-of-type {
+	margin-bottom: 0;}
+form#payment legend {
+	color: #384313;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #c0d576;}
+form#payment > fieldset > legend:before {
+	content: " " counter(fieldsets) ": ";
+	counter-increment: fieldsets;}
+form#payment fieldset fieldset legend {
+	color: #111111;
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 0;}
+form#payment ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;}
+form#payment ol ol li {
+	background: none;
+	border: none;
+	float: left;}
+form#payment ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;}
+form#payment ol ol li {
+	background: none;
+	border: none;
+	float: left;}
+form#payment label {
+	float: left;
+	font-size: 13px;
+	width: 110px;}
+form#payment fieldset fieldset label {
+	background:none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0 0 0 30px;
+	width: auto;}
+form#payment label[for=visa] {
+	background-image: url(visa.gif);}
+form#payment label[for=amex] {
+	background-image: url(amex.gif);}
+form#payment label[for=mastercard] {
+	background-image: url(mastercard.gif);}
+form#payment fieldset fieldset label:hover {
+	cursor: pointer;
+}
+form#payment input:not([type=radio]),
+form#payment textarea {
+	background: #ffffff;
+	border: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	outline: none;
+	padding: 5px;
+	width: 200px;
+}
+form#payment input:not([type=submit]):focus,
+form#payment textarea:focus {
+	background: #eaeaea;
+}
+form#payment input[type=radio] {
+	float: left;
+	margin-right: 5px;
+}
+form#payment button {
+	background: #384313;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
+	text-transform: uppercase;
+}
+form#payment button:hover {
+	background: #1e2506;
+	cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <div id="texto">
+  <h1>Pre Inscripción Examen General Mayo 2018</h1>
+  </div>
+ <form id=payment>
+	<fieldset>
+		<legend>Datos personales</legend>
+		<ol>
+			<li>
+			    <label for=dni>DNI</label>
+			    <input id=dni name=dni type=text placeholder="Número de DNI" required autofocus>
+			</li>
+			<li>
+			    <label for=name>Nombres</label>
+			    <input id=name name=name type=text placeholder="Nombres" required autofocus>
+			</li>
+			<li>
+			    <label for=ape>Apellidos</label>
+			    <input id=ape name=ape type=text placeholder="Apellidos" required autofocus>
+			</li>
+			<li>
+			    <label for=telefono>Telefono</label>
+			    <input id= Telefono=telefono type=telefono placeholder="951000000" required>
+			</li>		
+			<li>
+			    <label for=email>Email</label>
+			   <input id=email name=email type=email placeholder="ejemplo@unap.edu.pe" required>
+			</li>			
+			<li>
+			    <label for =genero>Genero </label> 
+				 <select id="genero" name="genero" >
+				 <option value="m" select> Masculino</option>
+				 <option value="f" select> Femenino</option>
+				 </select>		
+			</li>			
+			<li>
+			    <label for =es>Estado Civil </label> 
+				 <select id="es" name="es" >
+				 <option value="s" select> Soltero(a)</option>
+				 <option value="c" select> Casado(a)</option>
+				 <option value="v" select> Viudo(a)</option>
+				 <option value="d" select> Divorciado(a)</option>
+				 </select>			
+			</li>			
+			<li>
+				<label for=naci>Fecha de Nac.</label>
+			                <input id=naci type ="date" name="fecha"  >				
+			</li>
+		</ol>
+	</fieldset> 
+	<fieldset>
+		<button type=submit>Fin de preinscripción</button>
+	</fieldse
+</body>
+</html>
+
